@@ -11,7 +11,7 @@ const banner = [
     id: 1,
     img: "https://i.pinimg.com/originals/02/24/9c/02249cec0273714d0c59615f5e83e092.jpg",
     Name: "dương",
-    link:'',
+    link:'https://i.pinimg.com/originals/02/24/9c/02249cec0273714d0c59615f5e83e092.jpg',
     desc: "Durable flexible case that grips around the edges of your phone,Shock absorbent TPU case with anti-fingerprint finish,Colors are ink printed on the frosted shell surface,The design is featured on the back while the edges of the case are semi transparent and provide full access to ports,Compatible with Qi-standard wireless charging,Cases for all iPhone 12 and 13 models are compatible with MagSafe charging, too,Weight 26g,Thickness 1/16 inch (1.6mm)",
   },
   {
@@ -136,7 +136,7 @@ export default function Banner() {
                   <img src={data.img} alt=""  />
                 </a>
                 <span className={styles.descmain}>{data.desc}</span>
-                <a className={styles.dowload} href="./assets/images/img.png" download="AwesomeImage.png">Lưu</a>
+                <a className={styles.dowload} href="/https://i.pinimg.com/236x/23/21/6c/23216c17fa41e69765020be08e546cad.jpg" download="AwesomeImage.png">Lưu</a>
                 
               </div>
             );
