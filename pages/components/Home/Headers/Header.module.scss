@@ -1,19 +1,46 @@
-.HeaderMain{
-        .Header{
-        width: 100%;
-        max-width: 1414px;
-        height: 92px;
-        text-align: center;
-        position: fixed;
-        z-index: 99;
-        top: 0;
-        background: white;
-        .Logo{
-            img{
-                margin-top: 1.5%;
-                width: 130px;
-                height: 81px;
-            }
-        }
-    }   
+.Header {
+  height: 70px;
+  width: 100%;
+  max-width: 1349px;
+  background: #fff;
+  padding: 12px 16px;
+  display: flex;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  .Logo {
+      width: 50px;
+    cursor: pointer;
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  .Home{
+      background: black;
+      color: white;
+      border-radius: 35px;
+      text-align: center;
+      font-weight: 700;
+     h5{
+        cursor: pointer;
+        width: 100px;
+        padding: 12px;
+        font-size: 14px;
+     }
+  }
+  .search{
+      padding: 0 12px;
+      width: 100%;
+      height: 48px;
+    border-radius: 35px;
+  }
+  .info{
+      display: flex;
+      padding: 0px;
+      .mrb20{
+          padding: 0 10px;
+          cursor: pointer;
+      }
+  }
 }

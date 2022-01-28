@@ -8,6 +8,7 @@ import core from './core';
 import authenticateForm from './forms/authenticate';
 import userCreateForm from './forms/user-create';
 import projectCreateForm from './forms/project-create';
+import {postReducer} from './Home'
 
 export default combineReducers({
   router,
@@ -18,4 +19,5 @@ export default combineReducers({
   authenticateForm,
   userCreateForm,
   projectCreateForm,
+  postReducer,
 });

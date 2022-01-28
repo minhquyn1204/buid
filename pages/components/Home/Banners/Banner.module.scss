@@ -1,150 +1,115 @@
-.Banner{
-    font-size: 14px;
-    height: auto;
-    background: #2d3c61;
-    .title{
-        font-size: 27px;
-        color: #fff;
-        text-align: center;
-        padding: 2%;
-        ::after{
-            content: '';
-            display: block;
-            height: 3px;
-            width: 80px;
-            background: #2db34b;
-            margin: 10px auto -30px;
-        }
+.BannerMain {
+  -webkit-column-count: 6;
+  -moz-column-count: 6;
+  column-count: 6;
+  -webkit-column-width: 100%;
+  -moz-column-width: 100%;
+  column-width: 100%;
+  padding: 0 12px;
+  margin-top:80px ;
+  .Bannerimg {
+    margin-bottom: 16px;
+    .descmain{
+      display: none;
     }
+    .Banner {
+      position: relative;
+      -webkit-transition: all 350 ease;
+      transition: all 350ms ease;
+      cursor: pointer;
     
-    .Rowcontent{
-        padding:15px 60px;
-        margin: 0;
-        .allContent{
-            padding: 0;
-            margin: 0;
-            .mainContent{
-                padding: 0 13.125px;
-                .content1{
-                    background: white;
-                    height: auto;
-                    margin-bottom: 30px;
-                    overflow: hidden;
-                    
-                    .new_home_content{
-                        cursor: pointer;
-                        position: absolute;
-                        background: #ebebeb;
-                        padding: 15px 20px;
-                        color: #000;
-                        position: relative;
-                    }
-                    .icontime{
-                        font-size: 17px;
-
-                    }
-                    background: white;
-                    height: auto;
-                    margin-bottom: 30px;
-                    overflow: hidden;
-                    img{
-                        width: 100%;
-                        max-width: 100%; 
-                        transition: all 0.3s ease-in-out;
-                        width: 100%;
-                        cursor: pointer;
-                    }
-                    img:hover{
-                        transform: scale(1.1);
-                    }
-                    a{
-                        
-                        h3{
-                            font-size: 17px;
-                            font-weight: 700;
-                            line-height: 1.4;
-                            overflow: hidden;
-                            .icon:hover{
-                                margin: 0px 10px;
-                            }
-                        }
-                        text-decoration: none;
-                        color: #000;
-                        :hover{
-                            transition: all 0.3s ease-in-out;
-                            color: #2db34b;
-                        }
-                    }
-                    
-                    
-                }
-                .content2{  
-                            margin: 0;
-                            justify-content: space-between;
-                        .mrb30{
-                            overflow: hidden;
-                            height: auto;
-                            margin-bottom: 30px;
-                            width: 49%;
-                            padding: 0;
-                        }
-                        .new_home_content2{
-                            position: absolute;
-                            background: #ebebeb;
-                            padding: 15px 20px;
-                            color: #000;
-                            position: relative;
-                            .icontime{
-                                font-size: 17px;
-        
-                            }
-                        }
-                            img{
-                                cursor: pointer;
-                                max-width: 100%; 
-                                transition: all 0.3s ease-in-out;
-                                width: 100%;
-                            }
-                            img:hover{
-                                transform: scale(1.1);
-                            }
-                            a{
-                                h3{
-                                    font-size: 17px;
-                                    font-weight: 700;
-                                    line-height: 1.4;
-                                    overflow: hidden;
-                                    text-decoration: none;
-                                    color: #000;
-                                   
-                                }
-                                text-decoration: none;
-                                color: #000;
-                                :hover{
-                                    transition: all 0.3s ease-in-out;
-                                    color: #2db34b;
-                                }
-                            }
-                        }
-                }
-            }
-            
-        }
-        .tabContent{
-           
-                .titleContent{
-                    height: auto;
-                    background: white;
-                }    
-        }
+      &:hover {
+        filter: opacity(0.8);
+      }
+      img {
+        width: 100%;
+        max-width: 210px;
+        border-radius: 15px;
+      }
     }
-    @media only screen and (max-width: 600px) {
-        .mrb30 {
-            width: 100% !important;
-        }
+    &:hover .dowload{
+      visibility: visible;  
+    }
+    .dowload {
+      visibility: hidden;
+      position: absolute;
+      text-decoration: none;
+      transform: translate(-137%, 44%);
+      background: red;
+      padding: 0px 10px;
+      color: #fff;
+      border-radius: 15px;
+      width: 45px;
+      height: 25px;
+      font-weight: 500;
+      cursor: pointer;
+      z-index: 1;
+    }
+  }
 }
-@media only screen and (max-width: 400px) {
-    .Banner{
-        width: 500px;
-    }
+@media screen and (max-width: 768px) {
+  .BannerMain {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
+@media screen and (max-width: 375px) {
+  .BannerMain {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+
+.Open {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #151515;
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.5 ease-in-out ;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  overflow: hidden;
+  z-index: 999;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  .desc{
+    display: block;
+    color: white;
+    padding: 100px;
+    overflow: hidden;
+    display: block;
+    word-break: break-word;
+  }
+  svg {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 2rem;
+    height: 2rem;
+    padding: 5px;
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+  }
+ 
+}
+.Model {
+  img {
+    display: none;
+  }
+  svg {
+    display: none;
+  }
+  .desc{
+    display: none;
+  }
 }
